@@ -1,12 +1,15 @@
 import java.util.Scanner;
 
-public class CalculadoraBasica {
+public class CalculadoraBasica
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Scanner scanner = new Scanner(System.in);
         boolean continuar = true;
 
-        while (continuar) {
+        while (continuar)
+        {
             System.out.println("\nSelecciona una operación:");
             System.out.println("1. Suma");
             System.out.println("2. Resta");
@@ -17,13 +20,15 @@ public class CalculadoraBasica {
 
             int opcion = scanner.nextInt();
 
-            if (opcion >= 1 && opcion <= 4) {
+            if (opcion >= 1 && opcion <= 4)
+            {
                 System.out.print("Ingresa el primer número: ");
                 double num1 = scanner.nextDouble();
                 System.out.print("Ingresa el segundo número: ");
                 double num2 = scanner.nextDouble();
 
-                switch (opcion) {
+                switch (opcion)
+                {
                     case 1:
                         System.out.println("Resultado de la suma: " + sumar(num1, num2));
                         break;
@@ -34,17 +39,24 @@ public class CalculadoraBasica {
                         System.out.println("Resultado de la multiplicación: " + multiplicar(num1, num2));
                         break;
                     case 4:
-                        if (num2 != 0) {
+                        if (num2 != 0)
+                        {
                             System.out.println("Resultado de la división: " + dividir(num1, num2));
-                        } else {
+                        }
+                        else
+                        {
                             System.out.println("Error: No se puede dividir entre cero.");
                         }
                         break;
                 }
-            } else if (opcion == 5) {
+            }
+            else if (opcion == 5)
+            {
                 continuar = false;
                 System.out.println("Saliendo de la calculadora...");
-            } else {
+            }
+            else
+            {
                 System.out.println("Opción no válida. Intenta nuevamente.");
             }
         }
